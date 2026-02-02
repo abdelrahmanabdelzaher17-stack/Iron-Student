@@ -1,14 +1,14 @@
 
 import React from 'react';
 import { createRoot } from 'react-dom/client';
-import App from './App.tsx';
+import Login from './components/Login.tsx';
 
 const rootElement = document.getElementById('root');
 if (rootElement) {
   const root = createRoot(rootElement);
-  
+
   // Render مباشراً بدون تأخير غير ضروري لضمان سرعة استجابة PWA
-  root.render(<App />);
+  root.render(<Login onLogin={(user) => console.log('User logged in:', user)} />);
   
   // إخفاء الشاشة الافتتاحية بمجرد تحميل المكونات
   window.addEventListener('load', () => {
